@@ -1,0 +1,19 @@
+{
+  "name": "nodejs-building-api",
+  "version": "1.0.0",
+  "description": "Build fast, scalable and secure RESTful services with Node, Express and MongoDB, from setup to production",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/pedrocardoz0/NodeJS-Building-API.git"
+  },
+  "author": "'Pedro'",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/pedrocardoz0/NodeJS-Building-API/issues"
+  },
+  "homepage": "https://github.com/pedrocardoz0/NodeJS-Building-API#readme"
+}
