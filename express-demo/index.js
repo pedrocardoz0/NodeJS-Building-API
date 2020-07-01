@@ -64,11 +64,11 @@ app.get("/api/courses/:id", (req, res) => {
   if (!course) res.status(404).send("The course ID was not found");
   res.send(course);
 });
-
+/*
 app.get("/api/courses/:id", (req, res) => {
   res.send(req.params.id);
 });
-
+*/
 app.get("/api/post/:year/:month", (req, res) => {
   res.send(req.params.year);
 });
