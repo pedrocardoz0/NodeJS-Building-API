@@ -29,3 +29,8 @@
 ![PARAMS](index-532c126b6b.png)
 
 #### It doesn't matter at all how many params did you passa throw the URL, if you would like to acess **all** the params you can simples acess with **res.params**
+
+![QUERY](index-55b12e5a4d.png)
+
+#### If you want to acess Querystring values **res.query**
+-----

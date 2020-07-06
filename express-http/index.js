@@ -8,7 +8,8 @@ app.get("/", (req, res) => {
 });
 
 app.get("/api/posts/:year/:month", (req, res) => {
-  res.send(req.params.year)
+  //res.send(req.params.year)
+  res.send(req.query)
 })
 
 app.listen(3000, () => console.log("The server is running"));
