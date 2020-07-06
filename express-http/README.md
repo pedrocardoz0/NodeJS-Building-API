@@ -15,6 +15,10 @@
 
 ![GETMETHOD](index-f16a26babc.png)
 #### app.get(), receives two params first the **PATH** and the second it's a **Callback Function**.
+
+![GETMETHOD2](index-ff536b6626.png)
+
+#### The first param wait for an URL inside, that url it could recieve a paramter ID and then in line 2 **cont course** will recieve the result of the find method inside the array **courses**. If the course doesn't exist it will return **res.status(404)** It will represent the status code of NOT FOUND, if you would to send a custom message simply add **.send('text here')**. Finally, if there's any problems we use **res.send(course)**
 -----
 ## **Simple POST Request**
 
