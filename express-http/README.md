@@ -13,7 +13,19 @@
 
 ## **Simple GET Request**
 
-![GETMETHOD](C:\Users\pedro.ferreira\first-app-node\express-demo\index-6aa6d41c1a.png)
+![GETMETHOD](index-f16a26babc.png)
 #### app.get(), receives two params first the **PATH** and the second it's a **Callback Function**.
 -----
 ## **Simple POST Request**
+
+-----
+
+## **Route Parameters**
+
+![PARAMSITEM](index-15be33c2e5.png)
+
+#### We can simply acess parameters from the url following this logic above, you can pass whatever you want, doesn't matter at all the name of the varible itself.
+
+![PARAMS](index-532c126b6b.png)
+
+#### It doesn't matter at all how many params did you passa throw the URL, if you would like to acess **all** the params you can simples acess with **res.params**
