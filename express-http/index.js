@@ -1,6 +1,7 @@
 const express = require("express");
 const app = express();
-var bodyParser = require("body-parser");
+
+app.use(express.json())
 
 const courses = [
   { id: 1, name: 'c1' },
@@ -12,7 +13,16 @@ app.get("/", (req, res) => {
   res.send("Hello World !");
 });
 
-app.get("api/courses/", (req, res) => {
+app.get("/api/courses", (req, res) => {
+  res.send(courses)
+})
+
+app.post("/api/courses", (req, res) => {
+  const course = {
+    id: courses.length,
+    name: req.body.name
+  }
+  courses.push(course)
   res.send(courses)
 })
 

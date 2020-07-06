@@ -22,6 +22,18 @@
 -----
 ## **Simple POST Request**
 
+![POSTMETHOD](index-faea342bc6.png)
+
+#### Post reques is when we would like to inset something inside the API, sooner we can get that if we use these logic.
+
+#### You can noitce that, in line 2 to 5 we are creating an course object that will create an ID by course array length and then the key NAME extract from que **request body** the value name.
+
+
+#### If you would like to send the data, we need to have post man, just be carefull. Follow these images below
+
+![POSTMAN](postman.png)
+
+#### Remeber that we are using a middleware that is **app.use(express.json())** that middleware allow us to acess the body data from the request.
 -----
 
 ## **Route Parameters**
