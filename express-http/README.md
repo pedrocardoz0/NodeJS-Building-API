@@ -31,7 +31,7 @@
 
 #### If you would like to send the data, we need to have post man, just be carefull. Follow these images below
 
-![POSTMAN](postman.png)
+![POSTMAN](postman.PNG)
 
 #### Remeber that we are using a middleware that is **app.use(express.json())** that middleware allow us to acess the body data from the request.
 -----
@@ -50,3 +50,5 @@
 
 #### If you want to acess Querystring values **res.query**
 -----
+
+## **Input Validation**
