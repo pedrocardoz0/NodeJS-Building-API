@@ -76,3 +76,17 @@
 ![JOI](index-dacb4cfb55.png)
 
 #### We have already tested Joi, but, in our previous examples we were using a a lot the schema and Joi.Validate, so, why do we dont create a function to handdle all of that? Line 2 to 4 represents the entire schema and how the name parameter should look like, after that in line 6 we return the object from the function **Joi.validate()**
+
+-----
+
+## **Handling HTTP DELETE Request**
+
+##### We can delete itens by their index, take a look in this code example
+
+![DELETEMEHTOD](index-145d2d3aaa.png)
+
+#### Now i'm going to show to you how to DELETE in Postman, take a look in line five we have tried to find the index, and use splice method (That basicly remove tem item), and then we send to the user the course (Without the ID Object)
+
+![DELETEPOSTMAN](delete.PNG)
+
+#### If you try to use GET you are going to see that ID does not exist anymore.
