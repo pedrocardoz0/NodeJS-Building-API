@@ -60,3 +60,11 @@
 #### And for that reason i'm using Joi, it's a package that help us to validate that process, for example. In our case we want to validate the name body req, it must have at minimum 3 chart to add the information.
 
 #### In line 2 to 4, we define our schama that basicly we pass how the information must be made. Then in line 5 we get the result, and if the result.erro is true it's going to throw the error status and send the error. It's only going to happend if the information doesn't follow the structure
+
+-----
+
+## **Handling HTTP PUT Request**
+
+##### Before we start showing the code, it's important to refresh a little bit about PUT Method, at that point we have noitced that POST and PUT are really similar, but, they have their own diffrences PUT could add Data and Change them.
+
+![]
