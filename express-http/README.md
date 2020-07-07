@@ -67,4 +67,12 @@
 
 ##### Before we start showing the code, it's important to refresh a little bit about PUT Method, at that point we have noitced that POST and PUT are really similar, but, they have their own diffrences PUT could add Data and Change them.
 
-![]
+![PUTMETHOD](index-e2e5c2fa4d.png)
+
+#### In line 2 we can see that we have course and thid varible recieves the find bolean, that in line 4 it's goind to indicate to us the satuts code 404 and the message to the user only if the ID does not exit in the courses array object.
+
+#### In line 6 we are using Object Desctructuring, it runs the function **validateCourse()** that is a shoter way to use Joi.
+
+![JOI](index-dacb4cfb55.png)
+
+#### We have already tested Joi, but, in our previous examples we were using a a lot the schema and Joi.Validate, so, why do we dont create a function to handdle all of that? Line 2 to 4 represents the entire schema and how the name parameter should look like, after that in line 6 we return the object from the function **Joi.validate()**
