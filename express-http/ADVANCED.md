@@ -30,3 +30,11 @@
 ![UrlEncoded](urlencoded.png)
 
 #### In line 2 if you try to acess the *file.txt* you will see that the file will be there for you.
+
+-----
+
+## Third-party Middleware
+
+#### In this case we had used the npm i morgan package help us to log all the request to the server, it help us to see what's going on with the requests and the server. Each request is going to be shown in the console, but, if you want to change a little bit, you can save as a file.
+
+![Morgan](morgan.png)

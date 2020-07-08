@@ -11,7 +11,9 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "helmet": "^3.23.3",
     "joi": "^13.1.0",
+    "morgan": "^1.10.0",
     "nodemon": "^2.0.4"
   }
 }
