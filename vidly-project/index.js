@@ -1,5 +1,6 @@
 const Joi = require('joi')
 const express = require('express')
+const { isNumber, isString } = require('underscore')
 const app = express()
 
 app.use(express.json())
@@ -7,20 +8,26 @@ app.use(express.json())
 const geners = [
     {
         id: 1,
-        name: 'sifi'
+        name: 'SiFi'
     },
     {
         id: 2,
-        name: 'documentary'
+        name: 'Documentary'
     },
     {
         id: 3,
-        name: 'horror'
+        name: 'Horror'
     }
 ]
 
 app.get("/api/geners", (req, res) => {
     res.send(geners)
+})
+
+app.get("/api/geners/:id", (req, res) => {
+
+    if(req.params.id > geners.length) return res.status(404).send("Sorry we have not found this ID")
+    res.send(geners[req.params.id - 1])
 })
 
 app.post("/api/geners", (req, res) => {
