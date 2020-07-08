@@ -6,11 +6,18 @@ const auther = require("./auth")
 const express = require("express");
 const app = express();
 
+console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
+console.log(`app: ${app.get('env')}`)
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
 app.use(helmet())
-app.use(morgan('tiny'))
+
+if(app.get('env') === "development") {
+  app.use(morgan('tiny'))
+  console.log("Morgan Enable ...")
+}
 
 app.use(logger)
 app.use(auther)
