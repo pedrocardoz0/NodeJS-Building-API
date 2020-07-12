@@ -12,3 +12,12 @@
 SET app_password=123
 ```
 
+### *production.json, development.json*
+
+![](production-ec2b23ff1d.png)
+
+
+### *custom-environment-variables.json*
+
+![](custom-environment-variables-15e2e2de42.png)
+
