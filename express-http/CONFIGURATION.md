@@ -20,12 +20,12 @@ SET app_password=123
 
 ### *production.json, development.json*
 
-![](production-ec2b23ff1d.png)
+![](prints/production-ec2b23ff1d.png)
 
 
 ### *custom-environment-variables.json*
 
-![](custom-environment-variables-15e2e2de42.png)
+![](prints/custom-environment-variables-15e2e2de42.png)
 
 -----
 
@@ -55,6 +55,6 @@ npm i pug
 
 #### We need to set the engine template in our express server.
 
-![](index-e6ac3dc4e4.png)
+![](prints/index-e6ac3dc4e4.png)
 
 #### In the first line we have set the engine and which template we are going to use, at the second line the first parameter is the folder name and the second the path

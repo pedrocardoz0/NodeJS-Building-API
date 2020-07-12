@@ -13,16 +13,16 @@
 
 ## **Simple GET Request**
 
-![GETMETHOD](index-f16a26babc.png)
+![GETMETHOD](prints/index-f16a26babc.png)
 #### app.get(), receives two params first the **PATH** and the second it's a **Callback Function**.
 
-![GETMETHOD2](index-ff536b6626.png)
+![GETMETHOD2](prints/index-ff536b6626.png)
 
 #### The first param wait for an URL inside, that url it could recieve a paramter ID and then in line 2 **cont course** will recieve the result of the find method inside the array **courses**. If the course doesn't exist it will return **res.status(404)** It will represent the status code of NOT FOUND, if you would to send a custom message simply add **.send('text here')**. Finally, if there's any problems we use **res.send(course)**
 -----
 ## **Simple POST Request**
 
-![POSTMETHOD](index-faea342bc6.png)
+![POSTMETHOD](prints/index-faea342bc6.png)
 
 #### Post reques is when we would like to inset something inside the API, sooner we can get that if we use these logic.
 
@@ -31,29 +31,29 @@
 
 #### If you would like to send the data, we need to have post man, just be carefull. Follow these images below
 
-![POSTMAN](postman.PNG)
+![POSTMAN](prints/postman.PNG)
 
 #### Remeber that we are using a middleware that is **app.use(express.json())** that middleware allow us to acess the body data from the request.
 -----
 
 ## **Route Parameters**
 
-![PARAMSITEM](index-15be33c2e5.png)
+![PARAMSITEM](prints/index-15be33c2e5.png)
 
 #### We can simply acess parameters from the url following this logic above, you can pass whatever you want, doesn't matter at all the name of the varible itself.
 
-![PARAMS](index-532c126b6b.png)
+![PARAMS](prints/index-532c126b6b.png)
 
 #### It doesn't matter at all how many params did you passa throw the URL, if you would like to acess **all** the params you can simples acess with **res.params**
 
-![QUERY](index-55b12e5a4d.png)
+![QUERY](prints/index-55b12e5a4d.png)
 
 #### If you want to acess Querystring values **res.query**
 -----
 
 ## **Input Validation**
 
-![INPUTVALIDATION](index-af521c6af6.png)
+![INPUTVALIDATION](prints/index-af521c6af6.png)
 
 #### Allways that we are receiving data from the user, it's really important that we check and validate those informations.
 
@@ -67,13 +67,13 @@
 
 ##### Before we start showing the code, it's important to refresh a little bit about PUT Method, at that point we have noitced that POST and PUT are really similar, but, they have their own diffrences PUT could add Data and Change them.
 
-![PUTMETHOD](index-e2e5c2fa4d.png)
+![PUTMETHOD](prints/index-e2e5c2fa4d.png)
 
 #### In line 2 we can see that we have course and thid varible recieves the find bolean, that in line 4 it's goind to indicate to us the satuts code 404 and the message to the user only if the ID does not exit in the courses array object.
 
 #### In line 6 we are using Object Desctructuring, it runs the function **validateCourse()** that is a shoter way to use Joi.
 
-![JOI](index-dacb4cfb55.png)
+![JOI](prints/index-dacb4cfb55.png)
 
 #### We have already tested Joi, but, in our previous examples we were using a a lot the schema and Joi.Validate, so, why do we dont create a function to handdle all of that? Line 2 to 4 represents the entire schema and how the name parameter should look like, after that in line 6 we return the object from the function **Joi.validate()**
 
@@ -83,10 +83,10 @@
 
 ##### We can delete itens by their index, take a look in this code example
 
-![DELETEMEHTOD](index-145d2d3aaa.png)
+![DELETEMEHTOD](prints/index-145d2d3aaa.png)
 
 #### Now i'm going to show to you how to DELETE in Postman, take a look in line five we have tried to find the index, and use splice method (That basicly remove tem item), and then we send to the user the course (Without the ID Object)
 
-![DELETEPOSTMAN](delete.PNG)
+![DELETEPOSTMAN](prints/delete.PNG)
 
 #### If you try to use GET you are going to see that ID does not exist anymore.
