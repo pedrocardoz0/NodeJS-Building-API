@@ -1,3 +1,5 @@
+const appDebuger = require('debug')('app:appDebuger')
+const dbDebuger = require('debug')('app:db')
 const config = require('config')
 const morgan = require("morgan")
 const helmet = require("helmet")
@@ -22,8 +24,11 @@ app.use(helmet())
 
 if(app.get('env') === "development") {
   app.use(morgan('tiny'))
-  console.log("Morgan Enable ...")
+  appDebuger("Morgan Enable")
 }
+
+//DB Working
+dbDebuger("Connected to the database ...")
 
 app.use(logger)
 app.use(auther)
