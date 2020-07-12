@@ -44,3 +44,17 @@ npm i debug
 ```
 
 -----
+
+## Template Engine
+
+#### Some people like to use template engine can choose that, up to you, in this situation we are using PUG.
+
+```
+npm i pug
+```
+
+#### We need to set the engine template in our express server.
+
+![](index-e6ac3dc4e4.png)
+
+#### In the first line we have set the engine and which template we are going to use, at the second line the first parameter is the folder name and the second the path

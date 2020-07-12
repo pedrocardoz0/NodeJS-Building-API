@@ -17,6 +17,9 @@ console.log("Aplication Name: " + config.get("name"))
 console.log("Mail Server: " + config.get("mail.host"))
 console.log("Mail Password: " + config.get("mail.password"))
 
+app.set("view engine", "pug")
+app.set("views", "./views")
+
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
 app.use(express.static("public"))
@@ -40,7 +43,7 @@ const courses = [
 ]
 
 app.get("/", (req, res) => {
-  res.send("Hello World !");
+  res.render('index', {title: "My Express Website", message: "Hello World !"})
 });
 
 app.get("/api/courses", (req, res) => {
