@@ -8,11 +8,6 @@ const courses = [
     { id: 3, name: 'c3' }
 ]
 
-
-// router.get("/", (req, res) => {
-//     res.render('index', {title: "My Express Website", message: "Hello World !"})
-// });
-
 router.get("/", (req, res) => {
     res.send(courses)
 })
