@@ -1,13 +1,19 @@
+const config = require('config')
 const morgan = require("morgan")
 const helmet = require("helmet")
 const Joi = require("joi")
 const logger = require("./logger")
 const auther = require("./auth")
 const express = require("express");
+const { contentSecurityPolicy } = require('helmet')
 const app = express();
 
 console.log(`NODE_ENV: ${process.env.NODE_ENV}`)
 console.log(`app: ${app.get('env')}`)
+
+console.log("Aplication Name: " + config.get("name"))
+console.log("Mail Server: " + config.get("mail.host"))
+console.log("Mail Password: " + config.get("mail.password"))
 
 app.use(express.json())
 app.use(express.urlencoded({ extended: true }))
