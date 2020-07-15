@@ -35,3 +35,14 @@
 ![](img/index-532e5b353b.png)
 
 #### Looking at this code its a way better than the previous examples, if we see there is a nasted calling, in line 2 we have instaciated the function and then called that one, we pass gCommit as a callback that will be execured in getRepositories().
+
+-----
+
+## Promises
+
+#### When we are calling a promisse, it will allways return something for you in out code its rejecting so it faild and then it throw a error message
+
+![](img/promise-fc2fd4d2ef.png)
+
+
+#### If the promisse was sucessfull it will return one, if it's now i returns the Error message that is Message.
