@@ -23,3 +23,15 @@
 
 
 #### At line 5 we noiteced that we can acess the object properties and nother void *function()* and receives as parameter the repositories array, and then this function will run the *console.log()* and show in the console the repo array
+
+-----
+
+## Nasted Functions
+
+#### Take a look at this example, in the previous examples our code was looking as a christmas tree. In this new version we have reduces a lot the code.
+
+![](img/index-3f34ec25aa.png)
+
+![](img/index-532e5b353b.png)
+
+#### Looking at this code its a way better than the previous examples, if we see there is a nasted calling, in line 2 we have instaciated the function and then called that one, we pass gCommit as a callback that will be execured in getRepositories().
