@@ -110,3 +110,80 @@ p.catch(err => console.log(err))
 ```
 
 #### At this point we are passing that our promisse is already rejected, that's the idea, in the second line we catch the error and handle that to show in the *console.log()*. And the reason that we are passing *new Error("Message Stuff")* is related to the Object Error, if we only pass an single string we are only going to see that string not the Object Error.
+
+---
+
+## Parallel Promises
+
+
+#### With javascript we can run at the same time Promises, for exaple if you would like to make an request for two API, it's possible using promises.
+
+```javascript
+const p1 = new Promise((resolve) => {
+  setTimeout(() => {
+    console.log("Async operation 1 ...");
+    resolve(1);
+  }, 2000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Async operation 2 ...");
+    resolve(2);
+  }, 2000);
+});
+
+Promise.all([p1, p2])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err.message));
+
+```
+
+#### In the code above if the calling of both Promise were successful the output will be both of those values.
+
+```javascript
+const p1 = new Promise((resolve) => {
+  setTimeout(() => {
+    console.log("Async operation 1 ...");
+    resolve(1);
+  }, 2000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Async operation 2 ...");
+    reject(new Error("Error Message"));
+  }, 2000);
+});
+
+Promise.all([p1, p2])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err.message));
+
+```
+
+#### If you pay attention in this example here, you will see that the unique message the will appear is the error message, and the reason is because its related to the all statement, if one single Promise fail, the unique result will be the error message.
+
+
+```javascript
+const p1 = new Promise((resolve) => {
+  setTimeout(() => {
+    console.log("Async operation 1 ...");
+    resolve(1);
+  }, 2000);
+});
+
+const p2 = new Promise((resolve, reject) => {
+  setTimeout(() => {
+    console.log("Async operation 2 ...");
+    resolve(2);
+  }, 2000);
+});
+
+Promise.race([p1, p2])
+  .then((result) => console.log(result))
+  .catch((err) => console.log(err.message));
+
+```
+
+#### Take a loot the *Promise.race([])*, what it will return is the first resolve value, the first result from the promises, that will be one.
