@@ -52,7 +52,7 @@
 
 #### When we are going to consume some promisses it's importnat to use the catch and then for that. Take a o look at this example.
 
-```sh
+```javascript
 getUser(1)
   .then((user) => getRepositories(user.gitHubUsername))
   .then((repos) => getCommits(repos[0]))
@@ -62,7 +62,7 @@ getUser(1)
 
 #### With that we dont need anymore that messy structure in our code, if the previous promisse were sucessefull we simply accept that and run the next Promisse.
 
-```sh
+```javascript
 function getUser(id) {
   return new Promise((resolve, reject) => {
     setTimeout(() => {
@@ -92,3 +92,21 @@ function getCommits(repo) {
 ```
 
 #### In that exaple we see that the functions dont have any callback to return the values, with promises we can remove that because the async function will return a resolve or reject with the value that we want.
+
+---
+
+## Promise a little bit more
+
+```javascript
+const p = Promise.resolve({ id: 1, name: "Pedro"})
+p.then(result => console.log(result))
+```
+
+#### In this first line, if the calling is successful we pass resolve, and the object that we want to show, in fact it's going to be successful because it already pass the the resolve. At the second line we are passing then, it's going to return in the *console.log()* the result of that promisse.
+
+```javascript
+const p = Promise.reject(new Error("Error Message"))
+p.catch(err => console.log(err))
+```
+
+#### At this point we are passing that our promisse is already rejected, that's the idea, in the second line we catch the error and handle that to show in the *console.log()*. And the reason that we are passing *new Error("Message Stuff")* is related to the Object Error, if we only pass an single string we are only going to see that string not the Object Error.
