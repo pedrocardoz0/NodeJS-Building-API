@@ -187,3 +187,26 @@ Promise.race([p1, p2])
 ```
 
 #### Take a loot the *Promise.race([])*, what it will return is the first resolve value, the first result from the promises, that will be one.
+
+---
+
+## Async and Await
+
+#### Async and Await is really similar to Promises, but, allways that you want to use async and await we need to use try and catch statement.
+
+```javascript
+async function displayCommits() {
+  try {
+    const user = await getUser(1)
+    const repo = await getRepositories(user)
+    const commits = await getCommits(repo)
+    console.log(commits)
+  } catch (err) {
+    console.log("Error", err.message)
+  }
+}
+displayCommits()
+```
+
+
+#### As can see take a look at the first line the async function, inside of that we have try/catch statement, if some of that fail, the error will be shown and the code will stop.
