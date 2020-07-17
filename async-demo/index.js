@@ -1,5 +1,3 @@
-const { get } = require("mongoose");
-
 console.log("Before");
 
 // getUser(1)
